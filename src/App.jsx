@@ -32,8 +32,8 @@ const App = () => {
       <Navbar />
       <div className='text-center'>
         <h1 className='mt-5 font-semibold text-white text-2xl'>Todo App</h1>
-        <form onSubmit={addTodoInRedux}>
-          <input ref={input} type="text" placeholder="Type here" className="input mt-10 mb-4 input-bordered w-full max-w-xs" required/>
+        <form className='flex flex-wrap gap-y-[15px] items-center mt-10 justify-center' onSubmit={addTodoInRedux}>
+          <input ref={input} type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" required/>
           <button className="btn ms-2 hover:bg-white hover:border-[#383f47] hover:bg-[#1d232a] hover:text-white border-[#1d232a] bg-white text-[#1d232a]">Add</button>
         </form>
       </div>
