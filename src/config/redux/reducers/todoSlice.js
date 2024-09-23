@@ -14,9 +14,12 @@ export const todoSlice = createSlice({
         },
         removeTodo: (state,action) => {
             state.todo.splice(action.payload.index,1)
+        },
+        editTodo: (state,action) => {
+            state.todo[action.payload.index].title = action.payload.editedVal
         }
     }
 })
 
-export const { addTodo , removeTodo } = todoSlice.actions
+export const { addTodo , removeTodo, editTodo } = todoSlice.actions
 export default todoSlice.reducer
